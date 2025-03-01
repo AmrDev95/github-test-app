@@ -1,0 +1,27 @@
+<div class="h-full -m-4">
+    <div class="flex justify-center sm:justify-end h-fit">
+        <div role="alert" class="bg-white shadow-lg rounded flex sm:flex-row flex-col pr-4 transition duration-150 ease-in-out" id="notification">
+            <div [ngClass]="data.type === dialogType.success ? 'bg-green-400':'bg-red-400'" class="sm:p-6 p-2 ml-4 sm:ml-0 mt-4 sm:mt-0 flex items-center justify-center w-12 h-12 sm:h-auto sm:w-auto sm:rounded-tl sm:rounded-bl">
+                @if(data.type === dialogType.success){
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+                        <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-2.3-8.7l1.3 1.29 3.3-3.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-2-2a1 1 0 0 1 1.4-1.42z" />
+                    </svg>
+                } @else{
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="40" height="40">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>                      
+                }
+            </div>
+            <div class="flex flex-col justify-center pl-4 sm:w-fit py-4">
+                <p class="text-lg text-gray-800  font-semibold pb-1">
+                    @if(dialogType.success){
+                        Action Completed
+                    } @else{
+                        Action failed
+                    }
+                </p>
+                <p class="text-sm text-gray-600 pb-2 font-normal">{{data.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>

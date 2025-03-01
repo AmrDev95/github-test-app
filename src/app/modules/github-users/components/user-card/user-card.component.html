@@ -1,0 +1,53 @@
+@if(user){
+    <div class="flex items-center justify-center border-1 border-neutral-300 rounded-sm">
+        <div class="w-full rounded shadow-lg py-4 px-5 bg-white">
+            <div class="flex items-start justify-between">
+                <div class="flex items-center mb-4 lg:mb-0 mr-10">
+                    <div class="w-14 h-14 bg-cover rounded-md mr-3">
+                        <img [src]="user.avatar_url" alt="User Avatar" class="rounded-full h-full w-full overflow-hidden shadow" />
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold leading-4 text-gray-800">{{user.login}}</p>
+                        <p class="text-xs leading-3 text-gray-500 pt-2">{{user.company}}</p>
+                    </div>
+                </div>
+            </div>
+            <p class="pt-4 text-xs leading-4 text-gray-600">{{user.bio}}</p>
+    
+            <div class="flex items-center my-6">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-auto cursor-pointer text-gray-600 dark:text-gray-400 icon icon-tabler icon-tabler-heart" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                    </svg>
+                    <p class="ml-4 text-base leading-4 text-gray-500">91</p>
+                </div>
+                <div class="ml-8 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-auto cursor-pointer text-gray-600 dark:text-gray-400 icon icon-tabler icon-tabler-message-dots" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                        <line x1="12" y1="11" x2="12" y2="11.01" />
+                        <line x1="8" y1="11" x2="8" y2="11.01" />
+                        <line x1="16" y1="11" x2="16" y2="11.01" />
+                    </svg>
+                    <p class="ml-4 text-base leading-4 text-gray-500">14</p>
+                </div>
+                <div class="ml-8 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-auto cursor-pointer text-gray-600 dark:text-gray-400 icon icon-tabler icon-tabler-share" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="6" r="3" />
+                        <circle cx="18" cy="18" r="3" />
+                        <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+                        <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+                    </svg>
+                </div>
+            </div>
+    
+    
+            <div class="flex items-end justify-end">
+                <button [routerLink]="['/users', user.login]" class="text-xs font-medium leading-3 text-white py-3 px-4 rounded bg-indigo-700 focus:outline-none hover:opacity-90">View Details</button>
+            </div>
+        </div>
+    </div>
+}

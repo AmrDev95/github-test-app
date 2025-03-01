@@ -1,0 +1,8 @@
+<div class="fixed top-0 left-0 w-full z-[1000]">
+  @if(loadingService.isPageLoading | async){
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  }
+</div>
+
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
