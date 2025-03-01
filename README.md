@@ -1,6 +1,6 @@
 # Github search users app
 
-![Angular](https://img.shields.io/badge/Angular-v16-red) ![License](https://img.shields.io/badge/license-MIT-blue)
+![Angular](https://img.shields.io/badge/Angular-v19-red) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description
 This is an Angular project that uses NgRx for state management and angular material UI components.
